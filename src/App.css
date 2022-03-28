@@ -16,6 +16,7 @@ body {
 
 .app .mainHeading h1 {
   text-align: center;
+  margin-top: 2em;
 }
 
 .app h1,
