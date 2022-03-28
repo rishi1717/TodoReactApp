@@ -52,7 +52,13 @@ function App() {
 								<p>{td.text}</p>
 							</div>
 							<div className="right">
-								<i className="fas fa-times"></i>
+								<i onClick={(e)=>{
+                  const index = todos.findIndex((obj)=>{
+                    return obj.id === td.id
+                  })
+                  todos.splice(index,1)  
+                  console.log(index)
+                }} className="fas fa-times"></i>
 							</div>
 						</div>
 					</div>
@@ -67,7 +73,7 @@ function App() {
 					return (
 						<div className="todos">
 							<div className="todo">
-								<div class="left">
+								<div className="left">
 									<p>{td.text}</p>
 								</div>
 							</div>
